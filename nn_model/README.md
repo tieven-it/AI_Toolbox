@@ -12,6 +12,42 @@
 
 ------
 
+### 控制台
+
+&emsp;&emsp;num_unit：隐藏层的单元数
+
+&emsp;&emsp;例：num_unit = [50,100,200]
+
+&emsp;&emsp;生成3个模型，每个模型隐藏层的单元数分别为50,100,200
+
+&emsp;&emsp;例：num_unit = [50,100,200,500]
+
+&emsp;&emsp;生成4个模型，每个模型隐藏层的单元数分别为50,100,200,500
+
+
+
+&emsp;&emsp;func_flag：隐藏层激活函数
+
+&emsp;&emsp;例：func_flag = [1,0,0]
+
+&emsp;&emsp;生成1个模型，使用ReLu作为隐藏层激活函数
+
+&emsp;&emsp;例：func_flag = [1,1,1]
+
+&emsp;&emsp;生成3个模型，分别使用ReLu，Leaky_ReLu，Tanh作为隐藏层激活函数
+
+------
+
+### 报错原因
+
+&emsp;&emsp;有时代价函数可能会出现如下警告：RuntimeWarning: divide by zero encountered in log，原因是输出层的中间变量z的数值太大，经过逻辑回归函数转换输出为1，在代价函数中出现log(1-1)的情况。
+
+&emsp;&emsp;例：z = 40 → y' = sigmoid(z) = 1 →  log(y - y') = log(1 - 1) = log(0)
+
+&emsp;&emsp;解决方法：1，减小学习率；2，关闭警告；
+
+------
+
 ### 版本1.6
 
 &emsp;&emsp;1,修改反向传播算法,在dz上除m,而不是在dw和db上除m,与数学公式相对应

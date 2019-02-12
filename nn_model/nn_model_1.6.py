@@ -411,8 +411,8 @@ def nn_model(alpha, maxIters, layer_dims, activation, lambd, keep_prob, batch_si
     parameters = initialize_parameters(layer_dims)
 
     # 梯度检测
-    diff = gradient_checking(activation, lambd, keep_prob)
-    print("the error of gradient is %.2e" % diff)
+    # diff = gradient_checking(activation, lambd, keep_prob)
+    #  print("the error of gradient is %.2e" % diff)
 
     # 训练参数
     parameters, costs = training(train_x, train_y, parameters, alpha, maxIters,
@@ -516,7 +516,7 @@ def control_strategy(label):
     func = ["relu", "leaky_relu", "tanh"]
     num_features = 12288
     history = {}
-    alpha = 0.01
+    alpha = 0.1
     maxIters = 100
     lambd = 0                     # 0:关闭L2
     keep_prob = 1                 # 1:关闭drop_out
@@ -525,7 +525,7 @@ def control_strategy(label):
 
     # 策略一：一个隐藏层，不同的单元数
     if label == 1:
-        num_unit = [50, 100, 200]
+        num_unit = [50, 100]
         func_flag = [1, 0, 0]
         history = strategy_1(history, func, alpha, maxIters, func_flag, num_unit,
                              num_features, lambd, keep_prob, batch_size, optimizer)
