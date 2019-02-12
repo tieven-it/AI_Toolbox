@@ -2,7 +2,6 @@
 """
 Created on Tue Jan 22 19:30:54 2019
 1,添加drop_out正则化方法
-2,是否转换y的数据类型与出现np.log警告似乎没有关系
 @author: Alex
 """
 

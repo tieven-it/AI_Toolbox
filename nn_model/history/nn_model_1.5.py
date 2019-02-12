@@ -263,7 +263,7 @@ def initialize_optimizer(parameters, optimizer):
             caches["Vdw"+str(i)] = np.zeros(parameters["W"+str(i)].shape)
             caches["Vdb"+str(i)] = np.zeros(parameters["b"+str(i)].shape)
     
-    # atom方法
+    # adam方法
     elif optimizer == 3:
         for i in range(1, L+1):
             caches["Vdw"+str(i)] = np.zeros(parameters["W"+str(i)].shape)

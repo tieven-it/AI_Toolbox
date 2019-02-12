@@ -74,7 +74,8 @@ def initialize_parameters(layer_dims):
     L = len(layer_dims) - 1  # 总层数
 
     for i in range(1, L+1):
-        # 用he方法初始化
+        # he方法初始化（2/...）
+        # xavier 方法初始化（1/...）
         parameters["W"+str(i)] = np.random.randn(layer_dims[i], layer_dims[i-1]) * np.sqrt(2/layer_dims[i-1])
         parameters["b"+str(i)] = np.zeros((layer_dims[i], 1))
 
@@ -260,7 +261,7 @@ def initialize_optimizer(parameters, optimizer):
             caches["Vdw"+str(i)] = np.zeros(parameters["W"+str(i)].shape)
             caches["Vdb"+str(i)] = np.zeros(parameters["b"+str(i)].shape)
     
-    # atom方法
+    # adam方法
     elif optimizer == 3:
         for i in range(1, L+1):
             caches["Vdw"+str(i)] = np.zeros(parameters["W"+str(i)].shape)
