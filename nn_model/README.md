@@ -14,7 +14,7 @@
 
 ### 控制台
 
-&emsp;&emsp;num_unit：隐藏层的单元数
+&emsp;&emsp;**num_unit**：隐藏层的单元数
 
 &emsp;&emsp;例：num_unit = [50,100,200]
 
@@ -26,7 +26,9 @@
 
 
 
-&emsp;&emsp;func_flag：隐藏层激活函数
+
+
+&emsp;&emsp;**func_flag**：隐藏层激活函数
 
 &emsp;&emsp;例：func_flag = [1,0,0]
 
@@ -38,7 +40,7 @@
 
 ------
 
-### 报错原因
+### 报错情况
 
 &emsp;&emsp;有时代价函数可能会出现如下警告：RuntimeWarning: divide by zero encountered in log，原因是输出层的中间变量z的数值太大，经过逻辑回归函数转换输出为1，在代价函数中出现log(1-1)的情况。
 
