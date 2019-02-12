@@ -19,8 +19,11 @@
 ### 版本1.5
 
 &emsp;&emsp;1，添加mini_batch方法
+
 &emsp;&emsp;2，添加Momentum方法
+
 &emsp;&emsp;3，添加Adam方法
+
 &emsp;&emsp;4，将激活函数移到外部库
 
 ### 版本1.4
@@ -30,9 +33,13 @@
 ### 版本1.3
 
 &emsp;&emsp;1，使用均值归一化方法初始化数据
+
 &emsp;&emsp;2，使用He方法初始化参数矩阵
+
 &emsp;&emsp;3，不将sigmoid设为备选隐藏层激活函数
+
 &emsp;&emsp;4，添加L2正则化
+
 &emsp;&emsp;5，梯度检测不适用于ReLU函数，因为ReLU不是连续函数，在0处不可导
 
 ### 版本1.2
