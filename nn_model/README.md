@@ -1,14 +1,14 @@
 ### 主要模块
 
-基础模块：前向传播，反向传播，梯度检测
+&emsp;&emsp;基础模块：前向传播，反向传播，梯度检测
 
-参数更新：Gradient_descent方法，Momentum方法，Adam方法
+&emsp;&emsp;参数更新：Gradient_descent方法，Momentum方法，Adam方法
 
-梯度下降：mini_batch
+&emsp;&emsp;梯度下降：mini_batch
 
-正则化：L2正则化，drop_out正则化
+&emsp;&emsp;正则化：L2正则化，drop_out正则化
 
-初始化参数：He初始化，Xavier初始化
+&emsp;&emsp;初始化参数：He初始化，Xavier初始化
 
 ------
 
