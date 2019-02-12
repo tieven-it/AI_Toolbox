@@ -4,7 +4,7 @@
 
 &emsp;&emsp;参数更新：Gradient_descent方法，Momentum方法，Adam方法
 
-&emsp;&emsp;梯度下降：mini_batch
+&emsp;&emsp;梯度下降：mini_batch方法
 
 &emsp;&emsp;正则化：L2正则化，drop_out正则化
 
