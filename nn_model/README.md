@@ -58,13 +58,20 @@
 
 ### 报错情况
 
-&emsp;&emsp;有时代价函数可能会出现如下警告：RuntimeWarning: divide by zero encountered in log，原因是输出层的中间变量z的数值太大，经过逻辑回归函数转换输出为1，在代价函数中出现log(1-1)的情况。
+&emsp;&emsp;有时代价函数可能会出现如下警告：RuntimeWarning: divide by zero encountered in log，原因是输出层的中间变量z的数值太小，经过softmax函数转换为0，在代价函数中出现log(0)的情况。
 
-&emsp;&emsp;例：z = 40 → y' = sigmoid(z) = 1 →  log(y - y') = log(1 - 1) = log(0)
+&emsp;&emsp;例：z = -40 → y' = softmax(z) =  0 j→   log(y') = log(0)
 
 &emsp;&emsp;解决方法：1，减小学习率；2，关闭警告；
 
 ------
+### 版本1.7
+
+&emsp;&emsp;1，用softmax作为最后一层的激活函数；
+
+&emsp;&emsp;2，支持多元分类；
+
+&emsp;&emsp;2，移除sigmoid函数；
 
 ### 版本1.6
 
